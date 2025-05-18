@@ -33,11 +33,28 @@
             margin-left: 95px; /* 30 Pixel weiter nach rechts */
         }
 
+        h2 {
+            text-align: center;
+            font-size: 1em;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: 800;
+            color: #decd51;
+        }
+
+         p {
+            text-align: left;
+            font-size: 0.5em;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: 400;
+            color: #decd51;
+        }
+
         #myImage {
             width: 100%;
             position: fixed;
             top: 0px;
             z-index: 1;
+            opacity: 0.9;
         }
 
         canvas {
@@ -111,7 +128,6 @@
         }
 
         #photoBox {
-            display: none; /* Initially hidden */
             position: fixed;
             top: 50%;
             left: 50%;
@@ -128,10 +144,22 @@
             font-family: "Gill Sans", sans-serif;
             font-weight: 800;
             color: #decd51;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap; /* Verhindert Umbruch auf großen Bildschirmen */
+            align-items: center;
+            justify-content: center;
+        }
+
+        #photoBox img {
+            max-width: 24%; /* Platz für 4 Bilder nebeneinander */
+            max-height: 80%;
+            margin: 10px;
         }
 
         #reflexionBox {
-            display: none; /* Initially hidden */
+            display: none;
+            /* Initially hidden */
             position: fixed;
             top: 50%;
             left: 50%;
@@ -154,13 +182,17 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            width: 40px; /* Angepasste Breite */
-            height: 40px; /* Angepasste Höhe */
+            width: 40px;
+            /* Angepasste Breite */
+            height: 40px;
+            /* Angepasste Höhe */
             cursor: pointer;
-            font-size: 30px; /* Angepasste Schriftgröße für das Symbol */
+            font-size: 30px;
+            /* Angepasste Schriftgröße für das Symbol */
             background-color: #decd51;
             color: white;
-            border-radius: 50%; /* Mache den Button rund */
+            border-radius: 50%;
+            /* Mache den Button rund */
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
         }
     </style>
@@ -173,25 +205,34 @@
     <button id="button1" class="sideButton">Fotografien</button>
     <button id="button2" class="sideButton">Reflexion</button>
 
-    <div id="photoBox">
+    <div id="photoBox" style="display: none;">
         <span class="closeButton">&times;</span>
-        Fotografien
+        <img src="haufen2.jpeg" alt="Haufen 2">
+        <img src="haufen1.jpeg" alt="Haufen 1">
+        <img src="haufen3.jpeg" alt="Haufen 3">
+        <img src="IMG_9947 2.jpeg" alt="Haufen 4">
     </div>
 
     <div id="reflexionBox">
         <span class="closeButton">&times;</span>
-        Reflexion
+        <h2>Reflexion</h2>
+        <p>ich habe was gemacht</p>
     </div>
 
     <script src="lib/p5.min.js"></script>
     <script src="index.js"></script>
     <script>
+        // Setze die photoBox auf 'none' beim Laden der Seite (falls Inline-Stile nicht funktionieren)
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("photoBox").style.display = "none";
+        });
+
         document.getElementById("reloadButton").addEventListener("click", function() {
             location.reload();
         });
 
         document.getElementById("button1").addEventListener("click", function() {
-            document.getElementById("photoBox").style.display = "block";
+            document.getElementById("photoBox").style.display = "flex";
         });
 
         document.getElementById("button2").addEventListener("click", function() {

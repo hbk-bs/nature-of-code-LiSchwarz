@@ -47,7 +47,7 @@ class SandHill {
 
             fill(0);
             noStroke();
-            ellipse(pointX, pointY, 10, 10);
+            ellipse(pointX, pointY, 13, 13);
 
             noFill();
             stroke(tempStrokeColor);
@@ -58,7 +58,7 @@ class SandHill {
 }
 
 function setup() {
-    const canvas = createCanvas(windowWidth, 700);
+    const canvas = createCanvas(windowWidth, 600);
     canvas.parent("sketch");
     background(250, 190, 10, 0);
 
