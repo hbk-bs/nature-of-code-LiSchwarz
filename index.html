@@ -1,56 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>index</title>
-	<style>
-		/* Basic styles for readability */
-		body {
-			font-family: sans-serif;
-			max-width: 800px;
-			margin: 2em auto;
-			padding: 0 1em;
-			line-height: 1.6;
-		}
-		img { max-width: 100%; height: auto; }
-		pre { background-color: #f4f4f4; padding: 1em; overflow-x: auto; }
-		code { font-family: monospace; }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhügel Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Setze die Höhe des Bodys auf 100% der Viewport-Höhe */
+            background-color: #f0f0f0; /* Optionale Hintergrundfarbe */
+            background-image: url('wassersand1.png'); /* Hintergrundbild hinzufügen */
+            background-size: cover; /* Skaliere das Bild, um den gesamten Hintergrund abzudecken */
+            background-repeat: no-repeat; /* Verhindere das Wiederholen des Bildes */
+        }
+
+        #headline {
+            margin-bottom: 20px; /* Abstand zwischen Überschrift und Canvas */
+            font-size: 3em; /* Größe der Überschrift */
+            font-family: sans-serif; /* Schriftart der Überschrift */
+            font-weight: 900; /* Dicke der Überschrift */
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-	<!--
-You can add style tags and also script:src tags into markdown
-if you use https://marketplace.cursorapi.com/items?itemName=fmoronzirfas.markdown-to-html
-It will be included into your html file
-Just make sure to keep a line break between the markdown tags and the style/script tags
--->
-<style>
-html,
-body {
-height: 100%;
-}
-
-body {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-main {
-height: 100%;
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: flex-end;
-}
-</style>
-<h1>hello world</h1>
-<main>
-<div id="sketch"></div>
-<script src="lib/p5.min.js"></script>
-<script src="index.js"></script>
-</main>
-
+    <h1 id="headline">Wattwurmhaufen</h1>
+    <script src="lib/p5.min.js"></script>
+    <script src="index.js"></script>
+    <main>
+        <div id="sketch"></div>
+    </main>
 </body>
 </html>
