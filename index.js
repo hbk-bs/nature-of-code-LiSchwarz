@@ -58,9 +58,9 @@ class SandHill {
 }
 
 function setup() {
-    const canvas = createCanvas(500, 500);
+    const canvas = createCanvas(windowWidth, 700);
     canvas.parent("sketch");
-    background(250, 190, 10, 190);
+    background(250, 190, 10, 0);
 
     let x = 25;
     while (x < width) {
@@ -75,3 +75,7 @@ function setup() {
 }
 
 function draw() { }
+
+function windowResized() {
+    resizeCanvas(windowWidth, 500);
+}
