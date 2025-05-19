@@ -30,7 +30,7 @@
             z-index: 1000;
             position: relative;
             text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-            margin-left: 95px; /* 30 Pixel weiter nach rechts */
+            margin-left: 95px;
         }
 
         h2 {
@@ -47,8 +47,8 @@
             font-family: "Gill Sans", sans-serif;
             font-weight: 400;
             color: #decd51;
-            column-count: 2; /* Teile den Text in zwei Spalten auf */
-            column-gap: 120px; /* Füge einen größeren Abstand zwischen den Spalten hinzu */
+            column-count: 2;
+            column-gap: 120px;
         }
 
         #myImage {
@@ -72,16 +72,16 @@
             position: absolute;
             top: 100px;
             left: 40px;
-            width: 40px; /* Angepasste Breite */
-            height: 40px; /* Angepasste Höhe */
-            padding: 0; /* Entferne Innenabstand */
-            font-size: 20px; /* Angepasste Schriftgröße für das Symbol */
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            font-size: 20px;
             cursor: pointer;
             z-index: 1000;
             background-color: #decd51;
             color: white;
             border: none;
-            border-radius: 50%; /* Mache den Button rund */
+            border-radius: 50%;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s ease;
             display: flex;
@@ -95,24 +95,23 @@
 
         .sideButton {
             position: absolute;
-            width: 110px; /* Angepasste Breite */
-            height: 40px; /* Angepasste Höhe */
-            padding: 0; /* Entferne Innenabstand */
+            width: 110px;
+            height: 40px;
+            padding: 0;
             cursor: pointer;
             z-index: 1000;
             background-color: #decd51;
             color: white;
             border: none;
-            border-radius: 10%; /* Mache den Button rund */
+            border-radius: 10%;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center; /* Zentriert den Text */
+            text-align: center;
             font-size: 1.2em;
             font-family: "Gill Sans", sans-serif;
-            font-weight: 400;
         }
 
         .sideButton:hover {
@@ -148,20 +147,19 @@
             color: #decd51;
             display: flex;
             flex-direction: row;
-            flex-wrap: nowrap; /* Verhindert Umbruch auf großen Bildschirmen */
+            flex-wrap: nowrap;
             align-items: center;
             justify-content: center;
         }
 
         #photoBox img {
-            max-width: 24%; /* Platz für 4 Bilder nebeneinander */
+            max-width: 24%;
             max-height: 80%;
             margin: 10px;
         }
 
         #reflexionBox {
             display: none;
-            /* Initially hidden */
             position: fixed;
             top: 50%;
             left: 50%;
@@ -181,7 +179,7 @@
         }
 
         #reflexionBox p {
-            padding: 120px; /* Abstand zum Rand im p-Tag */
+            padding: 120px;
         }
 
         .closeButton {
@@ -189,17 +187,30 @@
             top: 20px;
             right: 20px;
             width: 40px;
-            /* Angepasste Breite */
             height: 40px;
-            /* Angepasste Höhe */
             cursor: pointer;
             font-size: 30px;
-            /* Angepasste Schriftgröße für das Symbol */
             background-color: #decd51;
             color: white;
             border-radius: 50%;
-            /* Mache den Button rund */
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #sourceCodeLink {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
+            bottom: 25px;
+            right: 40px;
+        }
+
+        #sourceCodeLink a {
+            font-size: 1.4em;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -223,44 +234,56 @@
         <span class="closeButton">&times;</span>
         <h2>Reflexion</h2>
         <p>Wattwurmhaufen – wie funktioniert das eigentlich? Und woher kommen die Löcher neben den Häufchen?
-Auf der Exkursion nach Amrum haben wir mehr über die im Boden lebenden Tierchen gelernt.
-<br><br>
-Wattwurmhaufen entstehen, wenn der Wattwurm Sand frisst, Nährstoffe herausfiltert und den Rest als spiralförmige Häufchen ausscheidet. Das Loch daneben ist der Eingang zu seiner U-förmigen Wohnröhre. Durch das Loch zieht er Wasser und Nahrung ein, der Haufen ist der Ausgang.
-<br><br>
-Ich entschied mich dafür, die Häufchen der Wattwürmer, im Rahmen der Aufgabe zu natürlichen Mustern und Vorgängen in der Natur, umzusetzen.
-In einem ersten Versuch habe ich versucht, einen Haufen möglichst realistisch und mit einer entsprechenden Animation darzustellen. Das fiel mir jedoch schwer, und die Umsetzung im Code erwies sich als komplizierter als gedacht. 
-<br><br>Außerdem rückten dabei die natürlichen Muster in den Hintergrund.
-<br><br>
-In der endgültigen Umsetzung geht es stärker um das Verhältnis und die Anordnung mehrerer Haufen zueinander – und nicht um die exakte Darstellung eines einzelnen. Wichtige Merkmale waren, dass sie sich in Größe und Form unterscheiden. Der Anfang bzw. das Ende der Spirale liegt außerdem nicht immer an der gleichen Stelle, sodass sich die Spiralen in unterschiedliche Richtungen winden. Zu jedem Häufchen sollte zudem ein Loch generiert werden. Aus stilistischen Gründen habe ich mich zusätzlich dafür entschieden, einen gewissen Spielraum in der Farbgebung zuzulassen – zwischen Orange- und Brauntönen.
-<br><br>
-Insgesamt fand ich es spannend, mehr über den Wattwurm zu erfahren und die Entstehung der Häufchen genauer zu beobachten. Die Häufchen könnten zum Teil noch interessantere und verschlungenere Spiralen bilden, um die Vielfalt der Realität noch besser wiederzugeben.
+            Auf der Exkursion nach Amrum haben wir mehr über die im Boden lebenden Tierchen gelernt.
+            <br><br>
+            Wattwurmhaufen entstehen, wenn der Wattwurm Sand frisst, Nährstoffe herausfiltert und den Rest als
+            spiralförmige Häufchen ausscheidet. Das Loch daneben ist der Eingang zu seiner U-förmigen Wohnröhre. Durch das
+            Loch zieht er Wasser und Nahrung ein, der Haufen ist der Ausgang.
+            <br><br>
+            Ich entschied mich dafür, die Häufchen der Wattwürmer, im Rahmen der Aufgabe zu natürlichen Mustern und
+            Vorgängen in der Natur, umzusetzen.
+            In einem ersten Versuch habe ich versucht, einen Haufen möglichst realistisch und mit einer entsprechenden
+            Animation darzustellen. Das fiel mir jedoch schwer, und die Umsetzung im Code erwies sich als komplizierter als
+            gedacht.
+            <br><br>Außerdem rückten dabei die natürlichen Muster in den Hintergrund.
+            <br><br>
+            In der endgültigen Umsetzung geht es stärker um das Verhältnis und die Anordnung mehrerer Haufen zueinander – und
+            nicht um die exakte Darstellung eines einzelnen. Wichtige Merkmale waren, dass sie sich in Größe und Form
+            unterscheiden. Der Anfang bzw. das Ende der Spirale liegt außerdem nicht immer an der gleichen Stelle, sodass
+            sich die Spiralen in unterschiedliche Richtungen winden. Zu jedem Häufchen sollte zudem ein Loch generiert
+            werden. Aus stilistischen Gründen habe ich mich zusätzlich dafür entschieden, einen gewissen Spielraum in der
+            Farbgebung zuzulassen – zwischen Orange- und Brauntönen.
+            <br><br>
+            Insgesamt fand ich es spannend, mehr über den Wattwurm zu erfahren und die Entstehung der Häufchen genauer zu
+            beobachten. Die Häufchen könnten zum Teil noch interessantere und verschlungenere Spiralen bilden, um die
+            Vielfalt der Realität noch besser wiederzugeben.
 
-</p>
+        </p>
     </div>
 
     <script src="lib/p5.min.js"></script>
     <script src="index.js"></script>
     <script>
         // Setze die photoBox auf 'none' beim Laden der Seite (falls Inline-Stile nicht funktionieren)
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("photoBox").style.display = "none";
         });
 
-        document.getElementById("reloadButton").addEventListener("click", function() {
+        document.getElementById("reloadButton").addEventListener("click", function () {
             location.reload();
         });
 
-        document.getElementById("button1").addEventListener("click", function() {
+        document.getElementById("button1").addEventListener("click", function () {
             document.getElementById("photoBox").style.display = "flex";
         });
 
-        document.getElementById("button2").addEventListener("click", function() {
+        document.getElementById("button2").addEventListener("click", function () {
             document.getElementById("reflexionBox").style.display = "block";
         });
 
         const closeButtons = document.querySelectorAll(".closeButton");
         closeButtons.forEach(button => {
-            button.addEventListener("click", function() {
+            button.addEventListener("click", function () {
                 const box = this.parentNode;
                 box.style.display = "none";
             });
@@ -269,6 +292,11 @@ Insgesamt fand ich es spannend, mehr über den Wattwurm zu erfahren und die Ents
     <main>
         <div id="sketch"></div>
     </main>
+
+    <div id="sourceCodeLink">
+        <a href="index.js">source code</a>
+    </div>
+
 </body>
 
 </html>
